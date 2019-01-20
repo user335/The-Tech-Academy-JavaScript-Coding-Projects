@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+  <style>
+  /* The container */
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+      top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+  
+  
+  /* Customize the label (the container) */
+.container2 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container2 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container2:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container2 input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container2 input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container2 .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+  
+</style>
+<body>
+
+    <h1>Choose Pizza Size</h1>
+    <label class="container">Personal - $6.00
+      <input type="radio" name="radio" id="Personal Pizza" value="6">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Medium - $10.00
+      <input type="radio" name="radio" id="Medium Pizza" checked="checked" value="10">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Large - $14.00
+      <input type="radio" name="radio" id="Large Pizza" value="14">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Extra Large - $16.00
+      <input type="radio" name="radio" id="Extra Large Pizza" value="16">
+      <span class="checkmark"></span>
+    </label>
+    
+    <h1>Choose Meats</h1>
+    <h2>1st free, $1.00 each after</h2>
+    <label class="container2">Pepperoni
+      <input type="checkbox" name="Meat" id="Pepperoni" value="1">
+      <span class="checkmark"></span>
+    </label>
+
+    <label class="container2">Sausage
+      <input type="checkbox" name="Meat" id="Sausage" value="1">
+      <span class="checkmark"></span>
+    </label>
+
+    <label class="container2">Canadian Bacon
+      <input type="checkbox" name="Meat" id="Canadian Bacon" value="1">
+      <span class="checkmark"></span>
+    </label>
+
+    <label class="container2">Ground Beef
+      <input type="checkbox" name="Meat" id="Ground Beef" value="1">
+      <span class="checkmark"></span>
+    </label>
+    
+    <label class="container2">Anchovy
+      <input type="checkbox" name="Meat" id="Anchovy" value="1">
+      <span class="checkmark"></span>
+    </label>
+    
+    <label class="container2">Chicken
+      <input type="checkbox" name="Meat" id="Chicken" value="1">
+      <span class="checkmark"></span>
+    </label>
+    
+        <h1>Choose Cheese Amount</h1>
+    <label class="container">Regular
+      <input type="radio" checked="checked" name="radio2" value="0" id="Regular Cheese">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Extra Cheese - $3 extra
+      <input type="radio" name="radio2" value="3" id="Extra Cheese">
+      <span class="checkmark"></span>
+    </label>
+        <label class="container">No Cheese
+      <input type="radio" name="radio2" value="0" id="No Cheese, you monster">
+      <span class="checkmark"></span>
+    </label>
+    
+            <h1>Choose Crust</h1>
+    <label class="container">Plain Crust
+      <input type="radio" checked="checked" name="radio3" value="0" id="Plain Crust">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Garlic Butter Crust
+      <input type="radio" name="radio3" value="0" id="Garlic Butter Crust">
+      <span class="checkmark"></span>
+    </label>
+        <label class="container">Cheese Stuffed Crust - $3 extra
+      <input type="radio" name="radio3" value="3" id="Cheese Stuffed Crust">
+      <span class="checkmark"></span>
+    </label>
+        <label class="container">Spicy Crust
+      <input type="radio" name="radio3" value="0" id="Spicy Crust">
+      <span class="checkmark"></span>
+    </label>
+        <label class="container">House Special Crust
+      <input type="radio" name="radio3" value="0">
+      <span class="checkmark"></span>
+    </label>
+    
+                <h1>Choose Sauce</h1>
+    <label class="container">Marinara Sauce
+      <input type="radio" checked="checked" name="radio4" value="0" id="Marinara Sauce">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">White Sauce
+      <input type="radio" name="radio4" value="0" id="White Sauce">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Barbeque Sauce
+      <input type="radio" name="radio4" value="0" id="Barbeque Sauce"> 
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">No Sauce
+      <input type="radio" name="radio4" value="0" id="No Sauce">
+      <span class="checkmark"></span>
+    </label>
+    
+        <h1>Choose Veggies</h1>
+            <h2>1st free, $1.00 each after</h2>
+    <label class="container2">Tomatoes
+      <input type="checkbox" name="Veggie" id="Tomatoes" value="1">
+      <span class="checkmark"></span>
+    </label>
+
+    <label class="container2">Onions
+      <input type="checkbox" name="Veggie" id="Onions" value="1">
+      <span class="checkmark"></span>
+    </label>
+
+    <label class="container2">Olives
+      <input type="checkbox" name="Veggie" id="Olives" value="1">
+      <span class="checkmark"></span>
+    </label>
+
+    <label class="container2">Green Peppers
+      <input type="checkbox" name="Veggie" id="Green Peppers" value="1">
+      <span class="checkmark"></span>
+    </label>
+    
+    <label class="container2">Mushrooms
+      <input type="checkbox" name="Veggie" id="Mushrooms" value="1">
+      <span class="checkmark"></span>
+    </label>
+    
+    <label class="container2">Pineapple
+      <input type="checkbox" name="Veggie" id="Pineapple" value="1">
+      <span class="checkmark"></span>
+    </label>
+	<label class="container2">Spinach
+      <input type="checkbox" name="Veggie" id="Spinach" value="1">
+      <span class="checkmark"></span>
+    </label>
+  <label class="container2">Jalapeno
+      <input type="checkbox" name="Veggie" id="Jalapeno" value="1">
+      <span class="checkmark"></span>
+    </label>
+    
+    
+
+    <br/>
+    <button onclick="sumTotal()">PLACE ORDER</button>
+    <br/>
+    <br/>
+        Total : $<input type="text" name="total" id="total"/>
+    <br/>
+    <br/>
+    <h3>Invoice : </h3>
+    <h4>Item Ordered    |   Price</h4>
+    <script>
+    function sumTotal() 
+    {
+       var inputs = document.getElementsByTagName('input'),
+        result = document.getElementById('total'),
+        sum = 0,
+        meatsAddedToRows = 0,
+        veggiesAddedToRows = 0;            
+        var table = document.getElementById("Receipt");
+        table.innerHTML = "";
+      for(var i=0; i<inputs.length; i++) 
+       {
+          var ip = inputs[i];
+
+          if (ip.name && ip.checked && ip.name.indexOf("total") < 0) {
+              sum += parseInt(ip.value) || 0;
+              if (ip.name=="Veggie")
+              {
+                veggiesAddedToRows++;
+                if (veggiesAddedToRows<2)
+                {
+                    addRowToReceipt(ip.id, 0);
+                }
+                else addRowToReceipt(ip.id, ip.value);
+              }
+              else if (ip.name=="Meat")
+              {
+                meatsAddedToRows++;
+                if (meatsAddedToRows<2)
+                {
+                    addRowToReceipt(ip.id, 0);
+                }
+                else addRowToReceipt(ip.id, ip.value);
+              }
+            else 
+            {
+                addRowToReceipt(ip.id, ip.value);
+            }
+          }
+        }
+    var veggies = document.getElementsByName('Veggie'),
+    	veggiecount = 0;
+    for(var i=0; i<veggies.length; i++)
+    {
+    	if(veggies[i].checked) {
+        	veggiecount++;
+        }
+    }
+	if (veggiecount > 0) {
+    	sum--;
+    }    
+    
+      var meats = document.getElementsByName('Meat'),
+    	meatcount = 0;
+    for(var i=0; i<meats.length; i++)
+    {
+    	if(meats[i].checked) {
+        	meatcount++;
+        }
+    }
+	if (meatcount > 0) {
+    	sum--;
+    }
+    
+    result.value = sum;
+    }
+
+    function addRowToReceipt(x, y)
+    {
+        var table = document.getElementById("Receipt");
+        var row = table.insertRow(-1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = x;
+        cell2.innerHTML = "$"+y;
+    }
+    </script>
+
+    <table id="Receipt"></table>
+ 
+  </body>
+</html>
